@@ -139,7 +139,7 @@
     "sha256": "45e6b4c4ab2a44541c5f328c13232c9ab2ec4008ffc9a563e73ceca875240868"
   },
   {
-    "name": "WizardCoder-33B-V1.1",
+    "name": "WizardCoder-33B",
     "license_name": "MICROSOFT RESEARCH LICENSE",
     "license_url": "https://huggingface.co/WizardLM/WizardCoder-33B-V1.1/blob/main/LICENSE",
     "chat_template": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n{% for message in messages %}{% if (message['role'] == 'user') != (loop.index0 % 2 == 0) %}{{ raise_exception('Conversation roles must alternate user/assistant/user/assistant/...') }}{% endif %}{% if message['role'] == 'user' %}{{ '### Instruction:\n' + message['content'] + '\n### Response:\n' }}{% elif message['role'] == 'assistant' %}{{ message['content'] + '\n' }}{% else %}{{ raise_exception('Only user and assistant roles are supported!') }}{% endif %}{% endfor %}",
