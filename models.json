@@ -126,5 +126,16 @@
       "https://huggingface.co/stabilityai/stable-code-3b/resolve/main/stable-code-3b-Q6_K.gguf"
     ],
     "sha256": "9749daf176491c33a7318660f1637c97674b0070d81740be8763b2811c495bfc"
+  },
+  {
+    "name": "Magiccoder-6.7B",
+    "license_name": "Deepseek License",
+    "license_url": "https://huggingface.co/deepseek-ai/deepseek-coder/blob/main/LICENSE-MODEL",
+    "prompt_template": "<｜fim▁begin｜>{prefix}<｜fim▁hole｜>{suffix}<｜fim▁end｜>",
+    "provider_url": "https://huggingface.co/TheBloke/Magicoder-S-DS-6.7B-GGUF",
+    "urls": [
+      "https://huggingface.co/TheBloke/Magicoder-S-DS-6.7B-GGUF/resolve/main/magicoder-s-ds-6.7b.Q8_0.gguf"
+    ],
+    "sha256": "45e6b4c4ab2a44541c5f328c13232c9ab2ec4008ffc9a563e73ceca875240868"
   }
 ]
