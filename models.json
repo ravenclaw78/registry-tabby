@@ -148,5 +148,15 @@
       "https://huggingface.co/TheBloke/WizardCoder-33B-V1.1-GGUF/resolve/main/wizardcoder-33b-v1.1.Q6_K.gguf"
     ],
     "sha256": "98fa5bbf869c008d97e622776cd3d49c3aa3475bafb692b384fcbb41dc55f1cf"
+  },
+  {
+    "name": "Refact-1.6B",
+    "provider_url": "https://huggingface.co/smallcloudai/Refact-1_6B-fim",
+    "license_name": "BigScience OpenRAIL-M",
+    "prompt_template": "<fim_prefix>{prefix}<fim_suffix>{suffix}<fim_middle>",
+    "urls": [
+      "https://huggingface.co/maddes8cht/smallcloudai-Refact-1_6B-fim-gguf/resolve/main/smallcloudai-Refact-1_6B-fim-Q8_0.gguf"
+    ],
+    "sha256": "8c00d506830413d5a629cd6fe84e58efd1110e0eeb8f7198a69f258c09167460"
   }
 ]
