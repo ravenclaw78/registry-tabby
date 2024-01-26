@@ -110,7 +110,7 @@
     "license_name": "Deepseek License",
     "license_url": "https://github.com/deepseek-ai/deepseek-coder/blob/main/LICENSE-MODEL",
     "prompt_template": "<｜fim▁begin｜>{prefix}<｜fim▁hole｜>{suffix}<｜fim▁end｜>",
-    "provider_url": "https://huggingface.co/deepseek-ai/deepseek-coder-33b-instruct",
+    "provider_url": "https://hf-mirror.com/deepseek-ai/deepseek-coder-33b-instruct",
     "urls": [
       "https://hf-mirror.com/TheBloke/deepseek-coder-33B-instruct-GGUF/resolve/main/deepseek-coder-33b-instruct.Q6_K.gguf"
     ],
@@ -143,7 +143,7 @@
     "license_name": "MICROSOFT RESEARCH LICENSE",
     "license_url": "https://huggingface.co/WizardLM/WizardCoder-33B-V1.1/blob/main/LICENSE",
     "chat_template": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n{% for message in messages %}{% if (message['role'] == 'user') != (loop.index0 % 2 == 0) %}{{ raise_exception('Conversation roles must alternate user/assistant/user/assistant/...') }}{% endif %}{% if message['role'] == 'user' %}{{ '### Instruction:\n' + message['content'] + '\n### Response:\n' }}{% elif message['role'] == 'assistant' %}{{ message['content'] + '\n' }}{% else %}{{ raise_exception('Only user and assistant roles are supported!') }}{% endif %}{% endfor %}",
-    "provider_url": "https://huggingface.co/TheBloke/WizardCoder-33B-V1.1-GGUF",
+    "provider_url": "https://hf-mirror.com/TheBloke/WizardCoder-33B-V1.1-GGUF",
     "urls": [
       "https://hf-mirror.com/TheBloke/WizardCoder-33B-V1.1-GGUF/resolve/main/wizardcoder-33b-v1.1.Q6_K.gguf"
     ],
