@@ -1,2 +1,5 @@
 # ignore idea files
 .idea
+
+# ignore pyenv files
+.python-version
