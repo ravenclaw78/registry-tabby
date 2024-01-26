@@ -111,9 +111,9 @@
     "license_url": "https://github.com/deepseek-ai/deepseek-coder/blob/main/LICENSE-MODEL",
     "prompt_template": "<｜fim▁begin｜>{prefix}<｜fim▁hole｜>{suffix}<｜fim▁end｜>",
     "chat_template": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n{% for message in messages %}{% if (message['role'] == 'user') != (loop.index0 % 2 == 0) %}{{ raise_exception('Conversation roles must alternate user/assistant/user/assistant/...') }}{% endif %}{% if message['role'] == 'user' %}{{ '### Instruction:\n' + message['content'] + '\n### Response:\n' }}{% elif message['role'] == 'assistant' %}{{ message['content'] + '\n' }}{% else %}{{ raise_exception('Only user and assistant roles are supported!') }}{% endif %}{% endfor %}",
-    "provider_url": "https://hf-mirror.com/deepseek-ai/deepseek-coder-33b-instruct",
+    "provider_url": "https://huggingface.co/deepseek-ai/deepseek-coder-33b-instruct",
     "urls": [
-      "https://hf-mirror.com/TheBloke/deepseek-coder-33B-instruct-GGUF/resolve/main/deepseek-coder-33b-instruct.Q6_K.gguf"
+      "https://huggingface.co/TheBloke/deepseek-coder-33B-instruct-GGUF/resolve/main/deepseek-coder-33b-instruct.Q6_K.gguf"
     ],
     "sha256": "79588d60e277c2749d401872c9f204bf2ecad4c950e42c46c1f6d1fc411057c6"
   },
@@ -145,9 +145,9 @@
     "license_url": "https://huggingface.co/WizardLM/WizardCoder-33B-V1.1/blob/main/LICENSE",
     "prompt_template": "<PRE> {prefix} <SUF>{suffix} <MID>",
     "chat_template": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n{% for message in messages %}{% if (message['role'] == 'user') != (loop.index0 % 2 == 0) %}{{ raise_exception('Conversation roles must alternate user/assistant/user/assistant/...') }}{% endif %}{% if message['role'] == 'user' %}{{ '### Instruction:\n' + message['content'] + '\n### Response:\n' }}{% elif message['role'] == 'assistant' %}{{ message['content'] + '\n' }}{% else %}{{ raise_exception('Only user and assistant roles are supported!') }}{% endif %}{% endfor %}",
-    "provider_url": "https://hf-mirror.com/TheBloke/WizardCoder-33B-V1.1-GGUF",
+    "provider_url": "https://huggingface.co/TheBloke/WizardCoder-33B-V1.1-GGUF",
     "urls": [
-      "https://hf-mirror.com/TheBloke/WizardCoder-33B-V1.1-GGUF/resolve/main/wizardcoder-33b-v1.1.Q6_K.gguf"
+      "https://huggingface.co/TheBloke/WizardCoder-33B-V1.1-GGUF/resolve/main/wizardcoder-33b-v1.1.Q6_K.gguf"
     ],
     "sha256": "98fa5bbf869c008d97e622776cd3d49c3aa3475bafb692b384fcbb41dc55f1cf"
   },
