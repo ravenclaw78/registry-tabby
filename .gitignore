@@ -3,3 +3,6 @@
 
 # ignore pyenv files
 .python-version
+
+# ignore temp jsons
+one-line-models.json
