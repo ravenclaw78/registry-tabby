@@ -124,9 +124,9 @@
     "prompt_template": "<fim_prefix>{prefix}<fim_suffix>{suffix}<fim_middle>",
     "provider_url": "https://huggingface.co/TheBloke/stable-code-3b-GGUF",
     "urls": [
-      "https://huggingface.co/TheBloke/stable-code-3b-GGUF/resolve/main/stable-code-3b.Q8_0.gguf"
+      "https://huggingface.co/TheBloke/stable-code-3b-GGUF/resolve/main/stable-code-3b.Q6_K.gguf"
     ],
-    "sha256": "cd992469323e850870f6f6034380e2c52505c13ee882c44357c55c45aa6dc84b"
+    "sha256": "ed10b6f9d27acc765f51bde6d02a585eaa5c559e545853eb531bb37cc1bca3cf"
   },
   {
     "name": "Magiccoder-6.7B",
