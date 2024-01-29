@@ -160,5 +160,17 @@
       "https://huggingface.co/maddes8cht/smallcloudai-Refact-1_6B-fim-gguf/resolve/main/smallcloudai-Refact-1_6B-fim-Q8_0.gguf"
     ],
     "sha256": "8c00d506830413d5a629cd6fe84e58efd1110e0eeb8f7198a69f258c09167460"
+  },
+  {
+    "name": "DeepseekCoder-67B",
+    "license_name": "Deepseek License",
+    "license_url": "https://github.com/deepseek-ai/deepseek-coder/blob/main/LICENSE-MODEL",
+    "prompt_template": "<｜fim▁begin｜>{prefix}<｜fim▁hole｜>{suffix}<｜fim▁end｜>",
+    "chat_template": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n{% for message in messages %}{% if (message['role'] == 'user') != (loop.index0 % 2 == 0) %}{{ raise_exception('Conversation roles must alternate user/assistant/user/assistant/...') }}{% endif %}{% if message['role'] == 'user' %}{{ '### Instruction:\n' + message['content'] + '\n### Response:\n' }}{% elif message['role'] == 'assistant' %}{{ message['content'] + '\n' }}{% else %}{{ raise_exception('Only user and assistant roles are supported!') }}{% endif %}{% endfor %}",
+    "provider_url": "https://huggingface.co/OpenBuddy/openbuddy-deepseek-67b-v15-base",
+    "urls": [
+      "https://huggingface.co/TheBloke/openbuddy-deepseek-67b-v15-base-GGUF/blob/main/openbuddy-deepseek-67b-v15-base.Q6_K.gguf-split-a"
+    ],
+    "sha256": "98888a4582d5e46289a2a21125ebac3fcd7e1d59834e9bfe3b5dacd7aa38e0b9"
   }
 ]
