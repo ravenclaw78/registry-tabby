@@ -205,7 +205,7 @@
     "chat_template": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n{% for message in messages %}{% if (message['role'] == 'user') != (loop.index0 % 2 == 0) %}{{ raise_exception('Conversation roles must alternate user/assistant/user/assistant/...') }}{% endif %}{% if message['role'] == 'user' %}{{ '### Instruction:\n' + message['content'] + '\n### Response:\n' }}{% elif message['role'] == 'assistant' %}{{ message['content'] + '\n' }}{% else %}{{ raise_exception('Only user and assistant roles are supported!') }}{% endif %}{% endfor %}",
     "provider_url": "https://huggingface.co/Qwen/Qwen1.5-14B-Chat-GGUF",
     "urls": [
-      "https://huggingface.co/Qwen/Qwen1.5-14B-Chat-GGUF/resolve/main/qwen1_5-14b-chat-q5_k_m.gguf"
+      "https://modelscope.cn/api/v1/models/qwen/Qwen1.5-14B-Chat-GGUF/repo?FilePath=qwen1.5-14b-chat-q5_k_m.gguf"
     ],
     "sha256": "c2e41b92416724a87a75a2ab9d368b47dba109eb14362ec378e8809ab6bcc49e"
   }
