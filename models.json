@@ -197,7 +197,7 @@
     ],
     "sha256": "7a12f7931073b74a829a03b4a9517a5d83fe628072e6f8132119043400e9a649"
   },
-    {
+  {
     "name": "Qwen1.5-14B-Chat",
     "license_name": "Tongyi Qianwen LICENSE AGREEMENT",
     "license_url": "https://huggingface.co/Qwen/Qwen1.5-14B-Chat-GGUF/blob/main/LICENSE",
@@ -208,5 +208,17 @@
       "https://huggingface.co/Qwen/Qwen1.5-14B-Chat-GGUF/resolve/main/qwen1_5-14b-chat-q5_k_m.gguf"
     ],
     "sha256": "c2e41b92416724a87a75a2ab9d368b47dba109eb14362ec378e8809ab6bcc49e"
+  },
+  {
+    "name": "Qwen1.5-72B-Chat",
+    "license_name": "Tongyi Qianwen LICENSE AGREEMENT",
+    "license_url": "https://huggingface.co/Qwen/Qwen1.5-72B-Chat-GGUF/blob/main/LICENSE",
+    "prompt_template": "<PRE> {prefix} <SUF>{suffix} <MID>",
+    "chat_template": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n{% for message in messages %}{% if (message['role'] == 'user') != (loop.index0 % 2 == 0) %}{{ raise_exception('Conversation roles must alternate user/assistant/user/assistant/...') }}{% endif %}{% if message['role'] == 'user' %}{{ '### Instruction:\n' + message['content'] + '\n### Response:\n' }}{% elif message['role'] == 'assistant' %}{{ message['content'] + '\n' }}{% else %}{{ raise_exception('Only user and assistant roles are supported!') }}{% endif %}{% endfor %}",
+    "provider_url": "https://huggingface.co/Qwen/Qwen1.5-72B-Chat-GGUF",
+    "urls": [
+      "https://huggingface.co/Qwen/Qwen1.5-72B-Chat-GGUF/resolve/main/qwen1_5-72b-chat-q5_k_m.gguf.a"
+    ],
+    "sha256": "d6c5799dbe1286b06dd365c3c2d7b36ffaa058795ed8ffeb2ba129fb343aad42"
   }
 ]
