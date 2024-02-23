@@ -220,5 +220,17 @@
       "https://huggingface.co/Qwen/Qwen1.5-72B-Chat-GGUF/resolve/main/qwen1_5-72b-chat-q5_k_m.gguf.a"
     ],
     "sha256": "d6c5799dbe1286b06dd365c3c2d7b36ffaa058795ed8ffeb2ba129fb343aad42"
+  },
+  {
+    "name": "Gemma-7B",
+    "license_name": "Gemma Terms of Use",
+    "license_url": "https://ai.google.dev/gemma/terms",
+    "prompt_template": "<PRE> {prefix} <SUF>{suffix} <MID>",
+    "chat_template": "Below is an instruction that describes a task. Write a response that appropriately completes the request. Unless specified otherwise, please respond in Chinese by default. For code, maintain its use in English, but use Chinese for comments within the code.\n{% for message in messages %}{% if (message['role'] == 'user') != (loop.index0 % 2 == 0) %}{{ raise_exception('Conversation roles must alternate user/assistant/user/assistant/...') }}{% endif %}{% if message['role'] == 'user' %}{{ '### Instruction:\n' + message['content'] + '\n### Response:\n' }}{% elif message['role'] == 'assistant' %}{{ message['content'] + '\n' }}{% else %}{{ raise_exception('Only user and assistant roles are supported!') }}{% endif %}{% endfor %}",
+    "provider_url": "https://huggingface.co/LoneStriker/gemma-7b-GGUF",
+    "urls": [
+      "https://huggingface.co/LoneStriker/gemma-7b-GGUF/resolve/main/gemma-7b-Q8_0.gguf"
+    ],
+    "sha256": "7f72310ab83b94033356b9491f37b0a0036a16c47a65307439862cdbb3462aa5"
   }
 ]
