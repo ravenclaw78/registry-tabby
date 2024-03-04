@@ -304,5 +304,41 @@
       "https://modelscope.cn/api/v1/models/TabbyML/CodeLlama-13B/repo?FilePath=ggml/q8_0.v2.gguf"
     ],
     "sha256": "bf333bc63648f0130065737e1ef98f9b49064d5bddeaca2c604d17c8b44325b7"
+  },
+  {
+    "name": "StarCoder2-15B",
+    "license_name": "BigCode-OpenRAIL-M",
+    "license_url": "https://huggingface.co/spaces/bigcode/bigcode-model-license-agreement",
+    "prompt_template": "<PRE> {prefix} <SUF>{suffix} <MID>",
+    "chat_template": "Below is an instruction that describes a task. Write a response that appropriately completes the request. Unless specified otherwise, please respond in Chinese by default. For code, maintain its use in English, but use Chinese for comments within the code.\n{% for message in messages %}{% if (message['role'] == 'user') != (loop.index0 % 2 == 0) %}{{ raise_exception('Conversation roles must alternate user/assistant/user/assistant/...') }}{% endif %}{% if message['role'] == 'user' %}{{ '### Instruction:\n' + message['content'] + '\n### Response:\n' }}{% elif message['role'] == 'assistant' %}{{ message['content'] + '\n' }}{% else %}{{ raise_exception('Only user and assistant roles are supported!') }}{% endif %}{% endfor %}",
+    "provider_url": "https://huggingface.co/second-state/StarCoder2-15B-GGUF",
+    "urls": [
+      "https://huggingface.co/second-state/StarCoder2-15B-GGUF/resolve/main/starcoder2-15b-Q8_0.gguf"
+    ],
+    "sha256": "6cfe972755f7924cf8c176cb8607027f105196b8abb7614a2f680e84171cb418"
+  },
+  {
+    "name": "StarCoder2-7B",
+    "license_name": "BigCode-OpenRAIL-M",
+    "license_url": "https://huggingface.co/spaces/bigcode/bigcode-model-license-agreement",
+    "prompt_template": "<PRE> {prefix} <SUF>{suffix} <MID>",
+    "chat_template": "Below is an instruction that describes a task. Write a response that appropriately completes the request. Unless specified otherwise, please respond in Chinese by default. For code, maintain its use in English, but use Chinese for comments within the code.\n{% for message in messages %}{% if (message['role'] == 'user') != (loop.index0 % 2 == 0) %}{{ raise_exception('Conversation roles must alternate user/assistant/user/assistant/...') }}{% endif %}{% if message['role'] == 'user' %}{{ '### Instruction:\n' + message['content'] + '\n### Response:\n' }}{% elif message['role'] == 'assistant' %}{{ message['content'] + '\n' }}{% else %}{{ raise_exception('Only user and assistant roles are supported!') }}{% endif %}{% endfor %}",
+    "provider_url": "https://huggingface.co/second-state/StarCoder2-7B-GGUF",
+    "urls": [
+      "https://huggingface.co/second-state/StarCoder2-7B-GGUF/resolve/main/starcoder2-7b-Q8_0.gguf"
+    ],
+    "sha256": "48b4842e14dc891e2abd7165ad36297cb45b702db0f98325f83fb0a94fd68dd8"
+  },
+  {
+    "name": "StarCoder2-3B",
+    "license_name": "BigCode-OpenRAIL-M",
+    "license_url": "https://huggingface.co/spaces/bigcode/bigcode-model-license-agreement",
+    "prompt_template": "<PRE> {prefix} <SUF>{suffix} <MID>",
+    "chat_template": "Below is an instruction that describes a task. Write a response that appropriately completes the request. Unless specified otherwise, please respond in Chinese by default. For code, maintain its use in English, but use Chinese for comments within the code.\n{% for message in messages %}{% if (message['role'] == 'user') != (loop.index0 % 2 == 0) %}{{ raise_exception('Conversation roles must alternate user/assistant/user/assistant/...') }}{% endif %}{% if message['role'] == 'user' %}{{ '### Instruction:\n' + message['content'] + '\n### Response:\n' }}{% elif message['role'] == 'assistant' %}{{ message['content'] + '\n' }}{% else %}{{ raise_exception('Only user and assistant roles are supported!') }}{% endif %}{% endfor %}",
+    "provider_url": "https://huggingface.co/second-state/StarCoder2-3B-GGUF",
+    "urls": [
+      "https://huggingface.co/second-state/StarCoder2-3B-GGUF/resolve/main/starcoder2-3b-Q8_0.gguf"
+    ],
+    "sha256": "b4cbf961fa378b1a9f86d5930d3fcb0c31bacfd3ad64fcd27aca680b10059ff8"
   }
 ]
