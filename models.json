@@ -64,7 +64,7 @@
     "provider_url": "https://huggingface.co/WizardLM/WizardCoder-3B-V1.0",
     "license_name": "BigCode-OpenRAIL-M",
     "license_url": "https://huggingface.co/spaces/bigcode/bigcode-model-license-agreement",
-    "chat_template": "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n{% for message in messages %}{% if (message['role'] == 'user') != (loop.index0 % 2 == 0) %}{{ raise_exception('Conversation roles must alternate user/assistant/user/assistant/...') }}{% endif %}{% if message['role'] == 'user' %}{{ '### Instruction:\n' + message['content'] + '\n### Response:\n' }}{% elif message['role'] == 'assistant' %}{{ message['content'] + '\n' }}{% else %}{{ raise_exception('Only user and assistant roles are supported!') }}{% endif %}{% endfor %}",
+    "chat_template": "Below is an instruction that describes a task. Write a response that appropriately completes the request. Unless specified otherwise, please respond in Chinese by default. For code, maintain its use in English, but use Chinese for comments within the code.\n{% for message in messages %}{% if (message['role'] == 'user') != (loop.index0 % 2 == 0) %}{{ raise_exception('Conversation roles must alternate user/assistant/user/assistant/...') }}{% endif %}{% if message['role'] == 'user' %}{{ '### Instruction:\n' + message['content'] + '\n### Response:\n' }}{% elif message['role'] == 'assistant' %}{{ message['content'] + '\n' }}{% else %}{{ raise_exception('Only user and assistant roles are supported!') }}{% endif %}{% endfor %}",
     "urls": [
       "https://huggingface.co/TabbyML/WizardCoder-3B/resolve/main/ggml/q8_0.v2.gguf",
       "https://modelscope.cn/api/v1/models/TabbyML/WizardCoder-3B/repo?FilePath=ggml/q8_0.v2.gguf"
@@ -104,5 +104,263 @@
       "https://huggingface.co/TheBloke/deepseek-coder-6.7B-base-GGUF/resolve/main/deepseek-coder-6.7b-base.Q8_0.gguf"
     ],
     "sha256": "a2f82242ac5e465037cbf1ed754f04f0be044ee196e1589905f9e4dcd0e6559d"
+  },
+  {
+    "name": "DeepseekCoder-33B",
+    "license_name": "Deepseek License",
+    "license_url": "https://github.com/deepseek-ai/deepseek-coder/blob/main/LICENSE-MODEL",
+    "prompt_template": "<｜fim▁begin｜>{prefix}<｜fim▁hole｜>{suffix}<｜fim▁end｜>",
+    "chat_template": "Below is an instruction that describes a task. Write a response that appropriately completes the request. Unless specified otherwise, please respond in Chinese by default. For code, maintain its use in English, but use Chinese for comments within the code.\n{% for message in messages %}{% if (message['role'] == 'user') != (loop.index0 % 2 == 0) %}{{ raise_exception('Conversation roles must alternate user/assistant/user/assistant/...') }}{% endif %}{% if message['role'] == 'user' %}{{ '### Instruction:\n' + message['content'] + '\n### Response:\n' }}{% elif message['role'] == 'assistant' %}{{ message['content'] + '\n' }}{% else %}{{ raise_exception('Only user and assistant roles are supported!') }}{% endif %}{% endfor %}",
+    "provider_url": "https://huggingface.co/deepseek-ai/deepseek-coder-33b-instruct",
+    "urls": [
+      "https://huggingface.co/TheBloke/deepseek-coder-33B-instruct-GGUF/resolve/main/deepseek-coder-33b-instruct.Q6_K.gguf"
+    ],
+    "sha256": "79588d60e277c2749d401872c9f204bf2ecad4c950e42c46c1f6d1fc411057c6"
+  },
+  {
+    "name": "StableCode-3B",
+    "license_name": "STABILITY AI NON-COMMERCIAL RESEARCH COMMUNITY LICENSE",
+    "license_url": "https://huggingface.co/stabilityai/stable-code-3b/blob/main/LICENSE",
+    "prompt_template": "<fim_prefix>{prefix}<fim_suffix>{suffix}<fim_middle>",
+    "provider_url": "https://huggingface.co/TheBloke/stable-code-3b-GGUF",
+    "urls": [
+      "https://huggingface.co/TheBloke/stable-code-3b-GGUF/resolve/main/stable-code-3b.Q6_K.gguf"
+    ],
+    "sha256": "ed10b6f9d27acc765f51bde6d02a585eaa5c559e545853eb531bb37cc1bca3cf"
+  },
+  {
+    "name": "Magiccoder-6.7B",
+    "license_name": "Deepseek License",
+    "license_url": "https://huggingface.co/deepseek-ai/deepseek-coder/blob/main/LICENSE-MODEL",
+    "prompt_template": "<｜fim▁begin｜>{prefix}<｜fim▁hole｜>{suffix}<｜fim▁end｜>",
+    "provider_url": "https://huggingface.co/TheBloke/Magicoder-S-DS-6.7B-GGUF",
+    "urls": [
+      "https://huggingface.co/TheBloke/Magicoder-S-DS-6.7B-GGUF/resolve/main/magicoder-s-ds-6.7b.Q8_0.gguf"
+    ],
+    "sha256": "45e6b4c4ab2a44541c5f328c13232c9ab2ec4008ffc9a563e73ceca875240868"
+  },
+  {
+    "name": "WizardCoder-33B",
+    "license_name": "MICROSOFT RESEARCH LICENSE",
+    "license_url": "https://huggingface.co/WizardLM/WizardCoder-33B-V1.1/blob/main/LICENSE",
+    "prompt_template": "<PRE> {prefix} <SUF>{suffix} <MID>",
+    "chat_template": "Below is an instruction that describes a task. Write a response that appropriately completes the request. Unless specified otherwise, please respond in Chinese by default. For code, maintain its use in English, but use Chinese for comments within the code.\n{% for message in messages %}{% if (message['role'] == 'user') != (loop.index0 % 2 == 0) %}{{ raise_exception('Conversation roles must alternate user/assistant/user/assistant/...') }}{% endif %}{% if message['role'] == 'user' %}{{ '### Instruction:\n' + message['content'] + '\n### Response:\n' }}{% elif message['role'] == 'assistant' %}{{ message['content'] + '\n' }}{% else %}{{ raise_exception('Only user and assistant roles are supported!') }}{% endif %}{% endfor %}",
+    "provider_url": "https://huggingface.co/TheBloke/WizardCoder-33B-V1.1-GGUF",
+    "urls": [
+      "https://huggingface.co/TheBloke/WizardCoder-33B-V1.1-GGUF/resolve/main/wizardcoder-33b-v1.1.Q6_K.gguf"
+    ],
+    "sha256": "98fa5bbf869c008d97e622776cd3d49c3aa3475bafb692b384fcbb41dc55f1cf"
+  },
+  {
+    "name": "Refact-1.6B",
+    "provider_url": "https://huggingface.co/smallcloudai/Refact-1_6B-fim",
+    "license_name": "BigScience OpenRAIL-M",
+    "prompt_template": "<fim_prefix>{prefix}<fim_suffix>{suffix}<fim_middle>",
+    "urls": [
+      "https://huggingface.co/maddes8cht/smallcloudai-Refact-1_6B-fim-gguf/resolve/main/smallcloudai-Refact-1_6B-fim-Q8_0.gguf"
+    ],
+    "sha256": "8c00d506830413d5a629cd6fe84e58efd1110e0eeb8f7198a69f258c09167460"
+  },
+  {
+    "name": "DeepseekCoder-67B",
+    "license_name": "Deepseek License",
+    "license_url": "https://github.com/deepseek-ai/deepseek-coder/blob/main/LICENSE-MODEL",
+    "prompt_template": "<｜fim▁begin｜>{prefix}<｜fim▁hole｜>{suffix}<｜fim▁end｜>",
+    "chat_template": "Below is an instruction that describes a task. Write a response that appropriately completes the request. Unless specified otherwise, please respond in Chinese by default. For code, maintain its use in English, but use Chinese for comments within the code.\n{% for message in messages %}{% if (message['role'] == 'user') != (loop.index0 % 2 == 0) %}{{ raise_exception('Conversation roles must alternate user/assistant/user/assistant/...') }}{% endif %}{% if message['role'] == 'user' %}{{ '### Instruction:\n' + message['content'] + '\n### Response:\n' }}{% elif message['role'] == 'assistant' %}{{ message['content'] + '\n' }}{% else %}{{ raise_exception('Only user and assistant roles are supported!') }}{% endif %}{% endfor %}",
+    "provider_url": "https://huggingface.co/OpenBuddy/openbuddy-deepseek-67b-v15-base",
+    "urls": [
+      "https://huggingface.co/TheBloke/openbuddy-deepseek-67b-v15-base-GGUF/resolve/main/openbuddy-deepseek-67b-v15-base.Q6_K.gguf-split-a"
+    ],
+    "sha256": "98888a4582d5e46289a2a21125ebac3fcd7e1d59834e9bfe3b5dacd7aa38e0b9"
+  },
+  {
+    "name": "DeepseekCoder-67B-Chat",
+    "license_name": "Deepseek License",
+    "license_url": "https://github.com/deepseek-ai/deepseek-coder/blob/main/LICENSE-MODEL",
+    "prompt_template": "<｜fim▁begin｜>{prefix}<｜fim▁hole｜>{suffix}<｜fim▁end｜>",
+    "chat_template": "Below is an instruction that describes a task. Write a response that appropriately completes the request. Unless specified otherwise, please respond in Chinese by default. For code, maintain its use in English, but use Chinese for comments within the code.\n{% for message in messages %}{% if (message['role'] == 'user') != (loop.index0 % 2 == 0) %}{{ raise_exception('Conversation roles must alternate user/assistant/user/assistant/...') }}{% endif %}{% if message['role'] == 'user' %}{{ '### Instruction:\n' + message['content'] + '\n### Response:\n' }}{% elif message['role'] == 'assistant' %}{{ message['content'] + '\n' }}{% else %}{{ raise_exception('Only user and assistant roles are supported!') }}{% endif %}{% endfor %}",
+    "provider_url": "https://huggingface.co/TheBloke/deepseek-llm-67b-chat-GGUF",
+    "urls": [
+      "https://huggingface.co/TheBloke/deepseek-llm-67b-chat-GGUF/resolve/main/deepseek-llm-67b-chat.Q5_K_M.gguf"
+    ],
+    "sha256": "ba7c296cac0f0ad5de30e60365387fa806ef8214ad004f7a47d7053f91601378"
+  },
+  {
+    "name": "CodeLlama-70B-Instruct",
+    "provider_url": "https://huggingface.co/codellama/CodeLlama-70b-Instruct-hf",
+    "license_name": "Llama 2",
+    "license_url": "https://github.com/facebookresearch/llama/blob/main/LICENSE",
+    "prompt_template": "<PRE> {prefix} <SUF>{suffix} <MID>",
+    "chat_template": "Below is an instruction that describes a task. Write a response that appropriately completes the request. Unless specified otherwise, please respond in Chinese by default. For code, maintain its use in English, but use Chinese for comments within the code.\n{% for message in messages %}{% if (message['role'] == 'user') != (loop.index0 % 2 == 0) %}{{ raise_exception('Conversation roles must alternate user/assistant/user/assistant/...') }}{% endif %}{% if message['role'] == 'user' %}{{ '### Instruction:\n' + message['content'] + '\n### Response:\n' }}{% elif message['role'] == 'assistant' %}{{ message['content'] + '\n' }}{% else %}{{ raise_exception('Only user and assistant roles are supported!') }}{% endif %}{% endfor %}",
+    "urls": [
+      "https://huggingface.co/TheBloke/CodeLlama-70B-Instruct-GGUF/resolve/main/codellama-70b-instruct.Q5_K_M.gguf"
+    ],
+    "sha256": "7a12f7931073b74a829a03b4a9517a5d83fe628072e6f8132119043400e9a649"
+  },
+  {
+    "name": "Qwen1.5-14B-Chat",
+    "license_name": "Tongyi Qianwen LICENSE AGREEMENT",
+    "license_url": "https://huggingface.co/Qwen/Qwen1.5-14B-Chat-GGUF/blob/main/LICENSE",
+    "prompt_template": "<PRE> {prefix} <SUF>{suffix} <MID>",
+    "chat_template": "Below is an instruction that describes a task. Write a response that appropriately completes the request. Unless specified otherwise, please respond in Chinese by default. For code, maintain its use in English, but use Chinese for comments within the code.\n{% for message in messages %}{% if (message['role'] == 'user') != (loop.index0 % 2 == 0) %}{{ raise_exception('Conversation roles must alternate user/assistant/user/assistant/...') }}{% endif %}{% if message['role'] == 'user' %}{{ '### Instruction:\n' + message['content'] + '\n### Response:\n' }}{% elif message['role'] == 'assistant' %}{{ message['content'] + '\n' }}{% else %}{{ raise_exception('Only user and assistant roles are supported!') }}{% endif %}{% endfor %}",
+    "provider_url": "https://huggingface.co/Qwen/Qwen1.5-14B-Chat-GGUF",
+    "urls": [
+      "https://huggingface.co/Qwen/Qwen1.5-14B-Chat-GGUF/resolve/main/qwen1_5-14b-chat-q5_k_m.gguf"
+    ],
+    "sha256": "c2e41b92416724a87a75a2ab9d368b47dba109eb14362ec378e8809ab6bcc49e"
+  },
+  {
+    "name": "Qwen1.5-72B-Chat",
+    "license_name": "Tongyi Qianwen LICENSE AGREEMENT",
+    "license_url": "https://huggingface.co/Qwen/Qwen1.5-72B-Chat-GGUF/blob/main/LICENSE",
+    "prompt_template": "<PRE> {prefix} <SUF>{suffix} <MID>",
+    "chat_template": "Below is an instruction that describes a task. Write a response that appropriately completes the request. Unless specified otherwise, please respond in Chinese by default. For code, maintain its use in English, but use Chinese for comments within the code.\n{% for message in messages %}{% if (message['role'] == 'user') != (loop.index0 % 2 == 0) %}{{ raise_exception('Conversation roles must alternate user/assistant/user/assistant/...') }}{% endif %}{% if message['role'] == 'user' %}{{ '### Instruction:\n' + message['content'] + '\n### Response:\n' }}{% elif message['role'] == 'assistant' %}{{ message['content'] + '\n' }}{% else %}{{ raise_exception('Only user and assistant roles are supported!') }}{% endif %}{% endfor %}",
+    "provider_url": "https://huggingface.co/Qwen/Qwen1.5-72B-Chat-GGUF",
+    "urls": [
+      "https://huggingface.co/Qwen/Qwen1.5-72B-Chat-GGUF/resolve/main/qwen1_5-72b-chat-q5_k_m.gguf.a"
+    ],
+    "sha256": "d6c5799dbe1286b06dd365c3c2d7b36ffaa058795ed8ffeb2ba129fb343aad42"
+  },
+  {
+    "name": "Gemma-7B",
+    "license_name": "Gemma Terms of Use",
+    "license_url": "https://ai.google.dev/gemma/terms",
+    "prompt_template": "<PRE> {prefix} <SUF>{suffix} <MID>",
+    "chat_template": "Below is an instruction that describes a task. Write a response that appropriately completes the request. Unless specified otherwise, please respond in Chinese by default. For code, maintain its use in English, but use Chinese for comments within the code.\n{% for message in messages %}{% if (message['role'] == 'user') != (loop.index0 % 2 == 0) %}{{ raise_exception('Conversation roles must alternate user/assistant/user/assistant/...') }}{% endif %}{% if message['role'] == 'user' %}{{ '### Instruction:\n' + message['content'] + '\n### Response:\n' }}{% elif message['role'] == 'assistant' %}{{ message['content'] + '\n' }}{% else %}{{ raise_exception('Only user and assistant roles are supported!') }}{% endif %}{% endfor %}",
+    "provider_url": "https://huggingface.co/LoneStriker/gemma-7b-GGUF",
+    "urls": [
+      "https://huggingface.co/LoneStriker/gemma-7b-GGUF/resolve/main/gemma-7b-Q8_0.gguf"
+    ],
+    "sha256": "7f72310ab83b94033356b9491f37b0a0036a16c47a65307439862cdbb3462aa5"
+  },
+  {
+    "name": "Gemma-7B-By-Google",
+    "license_name": "Gemma Terms of Use",
+    "license_url": "https://ai.google.dev/gemma/terms",
+    "prompt_template": "<PRE> {prefix} <SUF>{suffix} <MID>",
+    "chat_template": "Below is an instruction that describes a task. Write a response that appropriately completes the request. Unless specified otherwise, please respond in Chinese by default. For code, maintain its use in English, but use Chinese for comments within the code.\n{% for message in messages %}{% if (message['role'] == 'user') != (loop.index0 % 2 == 0) %}{{ raise_exception('Conversation roles must alternate user/assistant/user/assistant/...') }}{% endif %}{% if message['role'] == 'user' %}{{ '### Instruction:\n' + message['content'] + '\n### Response:\n' }}{% elif message['role'] == 'assistant' %}{{ message['content'] + '\n' }}{% else %}{{ raise_exception('Only user and assistant roles are supported!') }}{% endif %}{% endfor %}",
+    "provider_url": "https://huggingface.co/google/gemma-7b/",
+    "urls": [
+      "https://huggingface.co/google/gemma-7b/resolve/main/gemma-7b.gguf"
+    ],
+    "sha256": "b1f4aabd3db466eb1c8ff792efa7647cf02e56202574b9cdd555c2df32d5af43"
+  },
+  {
+    "name": "Gemma-7B-By-Ollama",
+    "license_name": "Gemma Terms of Use",
+    "license_url": "https://ai.google.dev/gemma/terms",
+    "prompt_template": "<PRE> {prefix} <SUF>{suffix} <MID>",
+    "chat_template": "Below is an instruction that describes a task. Write a response that appropriately completes the request. Unless specified otherwise, please respond in Chinese by default. For code, maintain its use in English, but use Chinese for comments within the code.\n{% for message in messages %}{% if (message['role'] == 'user') != (loop.index0 % 2 == 0) %}{{ raise_exception('Conversation roles must alternate user/assistant/user/assistant/...') }}{% endif %}{% if message['role'] == 'user' %}{{ '### Instruction:\n' + message['content'] + '\n### Response:\n' }}{% elif message['role'] == 'assistant' %}{{ message['content'] + '\n' }}{% else %}{{ raise_exception('Only user and assistant roles are supported!') }}{% endif %}{% endfor %}",
+    "provider_url": "https://huggingface.co/google/gemma-7b/",
+    "urls": [
+      "https://huggingface.co/google/gemma-7b/resolve/main/gemma-7b.gguf"
+    ],
+    "sha256": "456402914e838a953e0cf80caa6adbe75383d9e63584a964f504a7bbb8f7aad9"
+  },
+  {
+    "name": "Gemma-7B-IT-By-Mlabonne",
+    "license_name": "Gemma Terms of Use",
+    "license_url": "https://ai.google.dev/gemma/terms",
+    "prompt_template": "<PRE> {prefix} <SUF>{suffix} <MID>",
+    "chat_template": "Below is an instruction that describes a task. Write a response that appropriately completes the request. Unless specified otherwise, please respond in Chinese by default. For code, maintain its use in English, but use Chinese for comments within the code.\n{% for message in messages %}{% if (message['role'] == 'user') != (loop.index0 % 2 == 0) %}{{ raise_exception('Conversation roles must alternate user/assistant/user/assistant/...') }}{% endif %}{% if message['role'] == 'user' %}{{ '### Instruction:\n' + message['content'] + '\n### Response:\n' }}{% elif message['role'] == 'assistant' %}{{ message['content'] + '\n' }}{% else %}{{ raise_exception('Only user and assistant roles are supported!') }}{% endif %}{% endfor %}",
+    "provider_url": "https://huggingface.co/google/gemma-7b/",
+    "urls": [
+      "https://huggingface.co/mlabonne/gemma-7b-it-GGUF/resolve/main/gemma-7b-it.Q8_0.gguf"
+    ],
+    "sha256": "91f092aa54e2472e66085030edd77d038df72ceaefae7bbf7de1ff3262eb6625"
+  },
+  {
+    "name": "Gemma-7B-By-Mlabonne",
+    "license_name": "Gemma Terms of Use",
+    "license_url": "https://ai.google.dev/gemma/terms",
+    "prompt_template": "<PRE> {prefix} <SUF>{suffix} <MID>",
+    "chat_template": "Below is an instruction that describes a task. Write a response that appropriately completes the request. Unless specified otherwise, please respond in Chinese by default. For code, maintain its use in English, but use Chinese for comments within the code.\n{% for message in messages %}{% if (message['role'] == 'user') != (loop.index0 % 2 == 0) %}{{ raise_exception('Conversation roles must alternate user/assistant/user/assistant/...') }}{% endif %}{% if message['role'] == 'user' %}{{ '### Instruction:\n' + message['content'] + '\n### Response:\n' }}{% elif message['role'] == 'assistant' %}{{ message['content'] + '\n' }}{% else %}{{ raise_exception('Only user and assistant roles are supported!') }}{% endif %}{% endfor %}",
+    "provider_url": "https://huggingface.co/google/gemma-7b/",
+    "urls": [
+      "https://huggingface.co/mlabonne/gemma-7b-GGUF/resolve/main/gemma-7b.Q8_0.gguf"
+    ],
+    "sha256": "6a945698cac9f296a9d638ecbd0935387477fd0ad682b4be19e372036ea6e8c7"
+  },
+  {
+    "name": "CodeLlama-13B-RAG",
+    "provider_url": "https://huggingface.co/codellama/CodeLlama-13b-hf",
+    "license_name": "Llama 2",
+    "license_url": "https://github.com/facebookresearch/llama/blob/main/LICENSE",
+    "prompt_template": "<PRE> {prefix} <SUF>{suffix} <MID>",
+    "urls": [
+      "https://huggingface.co/TabbyML/CodeLlama-13B/resolve/main/ggml/q8_0.v2.gguf",
+      "https://modelscope.cn/api/v1/models/TabbyML/CodeLlama-13B/repo?FilePath=ggml/q8_0.v2.gguf"
+    ],
+    "sha256": "bf333bc63648f0130065737e1ef98f9b49064d5bddeaca2c604d17c8b44325b7"
+  },
+  {
+    "name": "CodeLlama-13B-Old",
+    "provider_url": "https://huggingface.co/codellama/CodeLlama-13b-hf",
+    "license_name": "Llama 2",
+    "license_url": "https://github.com/facebookresearch/llama/blob/main/LICENSE",
+    "prompt_template": "<PRE> {prefix} <SUF>{suffix} <MID>",
+    "urls": [
+      "https://huggingface.co/TabbyML/CodeLlama-13B/resolve/main/ggml/q8_0.v2.gguf",
+      "https://modelscope.cn/api/v1/models/TabbyML/CodeLlama-13B/repo?FilePath=ggml/q8_0.v2.gguf"
+    ],
+    "sha256": "bf333bc63648f0130065737e1ef98f9b49064d5bddeaca2c604d17c8b44325b7"
+  },
+  {
+    "name": "StarCoder2-15B",
+    "license_name": "BigCode-OpenRAIL-M",
+    "license_url": "https://huggingface.co/spaces/bigcode/bigcode-model-license-agreement",
+    "prompt_template": "<fim_prefix>{prefix}<fim_suffix>{suffix}<fim_middle>",
+    "chat_template": "Below is an instruction that describes a task. Write a response that appropriately completes the request. Unless specified otherwise, please respond in Chinese by default. For code, maintain its use in English, but use Chinese for comments within the code.\n{% for message in messages %}{% if (message['role'] == 'user') != (loop.index0 % 2 == 0) %}{{ raise_exception('Conversation roles must alternate user/assistant/user/assistant/...') }}{% endif %}{% if message['role'] == 'user' %}{{ '### Instruction:\n' + message['content'] + '\n### Response:\n' }}{% elif message['role'] == 'assistant' %}{{ message['content'] + '\n' }}{% else %}{{ raise_exception('Only user and assistant roles are supported!') }}{% endif %}{% endfor %}",
+    "provider_url": "https://huggingface.co/second-state/StarCoder2-15B-GGUF",
+    "urls": [
+      "https://huggingface.co/second-state/StarCoder2-15B-GGUF/resolve/main/starcoder2-15b-Q8_0.gguf"
+    ],
+    "sha256": "6cfe972755f7924cf8c176cb8607027f105196b8abb7614a2f680e84171cb418"
+  },
+  {
+    "name": "StarCoder2-7B",
+    "license_name": "BigCode-OpenRAIL-M",
+    "license_url": "https://huggingface.co/spaces/bigcode/bigcode-model-license-agreement",
+    "prompt_template": "<fim_prefix>{prefix}<fim_suffix>{suffix}<fim_middle>",
+    "chat_template": "Below is an instruction that describes a task. Write a response that appropriately completes the request. Unless specified otherwise, please respond in Chinese by default. For code, maintain its use in English, but use Chinese for comments within the code.\n{% for message in messages %}{% if (message['role'] == 'user') != (loop.index0 % 2 == 0) %}{{ raise_exception('Conversation roles must alternate user/assistant/user/assistant/...') }}{% endif %}{% if message['role'] == 'user' %}{{ '### Instruction:\n' + message['content'] + '\n### Response:\n' }}{% elif message['role'] == 'assistant' %}{{ message['content'] + '\n' }}{% else %}{{ raise_exception('Only user and assistant roles are supported!') }}{% endif %}{% endfor %}",
+    "provider_url": "https://huggingface.co/second-state/StarCoder2-7B-GGUF",
+    "urls": [
+      "https://huggingface.co/second-state/StarCoder2-7B-GGUF/resolve/main/starcoder2-7b-Q8_0.gguf"
+    ],
+    "sha256": "48b4842e14dc891e2abd7165ad36297cb45b702db0f98325f83fb0a94fd68dd8"
+  },
+  {
+    "name": "StarCoder2-3B",
+    "license_name": "BigCode-OpenRAIL-M",
+    "license_url": "https://huggingface.co/spaces/bigcode/bigcode-model-license-agreement",
+    "prompt_template": "<fim_prefix>{prefix}<fim_suffix>{suffix}<fim_middle>",
+    "chat_template": "Below is an instruction that describes a task. Write a response that appropriately completes the request. Unless specified otherwise, please respond in Chinese by default. For code, maintain its use in English, but use Chinese for comments within the code.\n{% for message in messages %}{% if (message['role'] == 'user') != (loop.index0 % 2 == 0) %}{{ raise_exception('Conversation roles must alternate user/assistant/user/assistant/...') }}{% endif %}{% if message['role'] == 'user' %}{{ '### Instruction:\n' + message['content'] + '\n### Response:\n' }}{% elif message['role'] == 'assistant' %}{{ message['content'] + '\n' }}{% else %}{{ raise_exception('Only user and assistant roles are supported!') }}{% endif %}{% endfor %}",
+    "provider_url": "https://huggingface.co/second-state/StarCoder2-3B-GGUF",
+    "urls": [
+      "https://huggingface.co/second-state/StarCoder2-3B-GGUF/resolve/main/starcoder2-3b-Q8_0.gguf"
+    ],
+    "sha256": "b4cbf961fa378b1a9f86d5930d3fcb0c31bacfd3ad64fcd27aca680b10059ff8"
+  },
+  {
+    "name": "CodeLlama-34B",
+    "provider_url": "https://huggingface.co/codellama/CodeLlama-34b-hf",
+    "license_name": "Llama 2",
+    "license_url": "https://github.com/facebookresearch/llama/blob/main/LICENSE",
+    "prompt_template": "<PRE> {prefix} <SUF>{suffix} <MID>",
+    "urls": [
+      "https://huggingface.co/TheBloke/CodeLlama-34B-GGUF/resolve/main/codellama-34b.Q8_0.gguf"
+    ],
+    "sha256": "c61b962cd49c892ee8a2591daadc03e5a41926a27773bc9ab50b62b706b0a73c"
+  },
+  {
+    "name": "Phind-CodeLlama-34B-V2",
+    "provider_url": "https://huggingface.co/codellama/CodeLlama-34b-hf",
+    "license_name": "Llama 2",
+    "license_url": "https://github.com/facebookresearch/llama/blob/main/LICENSE",
+    "prompt_template": "<PRE> {prefix} <SUF>{suffix} <MID>",
+    "urls": [
+      "https://huggingface.co/TheBloke/Phind-CodeLlama-34B-v2-GGUF/resolve/main/phind-codellama-34b-v2.Q8_0.gguf"
+    ],
+    "sha256": "18411d40a9dfcf9a15ddc2161f984fba52f6b61aedb66c127dc7bbcf9f148b08"
   }
 ]
