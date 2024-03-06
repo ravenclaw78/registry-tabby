@@ -1,7 +1,10 @@
-# ignore idea files
-.idea
+/target
+node_modules
+.idea/
+.DS_Store
+.vscode/
+__pycache__
 
-# ignore pyenv files
 .python-version
 
 # ignore temp jsons
