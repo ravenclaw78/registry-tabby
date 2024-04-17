@@ -4,5 +4,13 @@
 # ignore pyenv files
 .python-version
 
+# something
+/target
+node_modules
+.idea/
+.DS_Store
+.vscode/
+__pycache__
+
 # ignore temp jsons
 one-line-models.json
