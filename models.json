@@ -400,10 +400,10 @@
     "license_url": "https://huggingface.co/Qwen/Qwen1.5-14B-Chat-GGUF/blob/main/LICENSE",
     "prompt_template": "<PRE> {prefix} <SUF>{suffix} <MID>",
     "chat_template": "Below is an instruction that describes a task. Write a response that appropriately completes the request. Unless specified otherwise, please respond in Chinese by default. For code, maintain its use in English, but use Chinese for comments within the code.\n{% for message in messages %}{% if (message['role'] == 'user') != (loop.index0 % 2 == 0) %}{{ raise_exception('Conversation roles must alternate user/assistant/user/assistant/...') }}{% endif %}{% if message['role'] == 'user' %}{{ '### Instruction:\n' + message['content'] + '\n### Response:\n' }}{% elif message['role'] == 'assistant' %}{{ message['content'] + '\n' }}{% else %}{{ raise_exception('Only user and assistant roles are supported!') }}{% endif %}{% endfor %}",
-    "provider_url": "https://huggingface.co/NikolayKozloff/CodeQwen1.5-7B-Q8_0-GGUF",
+    "provider_url": "https://huggingface.co/bartowski/CodeQwen1.5-7B-GGUF",
     "urls": [
-      "https://huggingface.co/NikolayKozloff/CodeQwen1.5-7B-Q8_0-GGUF/resolve/main/codeqwen1.5-7b.Q8_0.gguf"
+      "https://huggingface.co/bartowski/CodeQwen1.5-7B-GGUF/resolve/main/CodeQwen1.5-7B-Q8_0.gguf"
     ],
-    "sha256": "627bf1978d7627998575f63a465c81053964e65bec4be662a5305742a172501a"
+    "sha256": "d9722be0758027d6da9e50df1ec5b2e69e5a3cc1b1851201abb8da07fad0d26d"
   }
 ]
