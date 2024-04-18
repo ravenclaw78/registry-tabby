@@ -393,5 +393,17 @@
       "https://huggingface.co/TheBloke/Phind-CodeLlama-34B-v2-GGUF/resolve/main/phind-codellama-34b-v2.Q8_0.gguf"
     ],
     "sha256": "18411d40a9dfcf9a15ddc2161f984fba52f6b61aedb66c127dc7bbcf9f148b08"
+  },
+    {
+    "name": "CodeQwen1.5-7B",
+    "license_name": "Tongyi Qianwen LICENSE AGREEMENT",
+    "license_url": "https://huggingface.co/Qwen/Qwen1.5-14B-Chat-GGUF/blob/main/LICENSE",
+    "prompt_template": "<PRE> {prefix} <SUF>{suffix} <MID>",
+    "chat_template": "Below is an instruction that describes a task. Write a response that appropriately completes the request. Unless specified otherwise, please respond in Chinese by default. For code, maintain its use in English, but use Chinese for comments within the code.\n{% for message in messages %}{% if (message['role'] == 'user') != (loop.index0 % 2 == 0) %}{{ raise_exception('Conversation roles must alternate user/assistant/user/assistant/...') }}{% endif %}{% if message['role'] == 'user' %}{{ '### Instruction:\n' + message['content'] + '\n### Response:\n' }}{% elif message['role'] == 'assistant' %}{{ message['content'] + '\n' }}{% else %}{{ raise_exception('Only user and assistant roles are supported!') }}{% endif %}{% endfor %}",
+    "provider_url": "https://huggingface.co/NikolayKozloff/CodeQwen1.5-7B-Q8_0-GGUF",
+    "urls": [
+      "https://huggingface.co/NikolayKozloff/CodeQwen1.5-7B-Q8_0-GGUF/resolve/main/codeqwen1.5-7b.Q8_0.gguf"
+    ],
+    "sha256": "627bf1978d7627998575f63a465c81053964e65bec4be662a5305742a172501a"
   }
 ]
